@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  reddit-demo:
+    build: .
+    environment:
+      - REDDIT_CLIENT_ID=${REDDIT_CLIENT_ID}
+      - REDDIT_CLIENT_SECRET=${REDDIT_CLIENT_SECRET}
+      - SUBREDDIT_NAME=${SUBREDDIT_NAME:-python}
+      - POST_LIMIT=${POST_LIMIT:-10}
+    volumes:
+      - ./output:/app/output
+    working_dir: /app
