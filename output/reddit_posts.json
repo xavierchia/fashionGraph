@@ -9,84 +9,84 @@
     "selftext": "# Weekly Thread: What's Everyone Working On This Week? 🛠️\n\nHello /r/Python! It's time to share what you've been working on! Whether it's a work-in-progress, a completed masterpiece, or just a rough id..."
   },
   {
-    "title": "Friday Daily Thread: r/Python Meta and Free-Talk Fridays",
+    "title": "Saturday Daily Thread: Resource Request and Sharing! Daily Thread",
     "author": "AutoModerator",
-    "score": 5,
-    "url": "https://www.reddit.com/r/Python/comments/1mkg85s/friday_daily_thread_rpython_meta_and_freetalk/",
-    "created_utc": "2025-08-08T00:00:15",
+    "score": 1,
+    "url": "https://www.reddit.com/r/Python/comments/1mlb4if/saturday_daily_thread_resource_request_and/",
+    "created_utc": "2025-08-09T00:00:31",
     "num_comments": 0,
-    "selftext": "# Weekly Thread: Meta Discussions and Free Talk Friday 🎙️\n\nWelcome to Free Talk Friday on /r/Python! This is the place to discuss the r/Python community (meta discussions), Python news, projects, or a..."
+    "selftext": "# Weekly Thread: Resource Request and Sharing 📚\n\nStumbled upon a useful Python resource? Or are you looking for a guide on a specific topic? Welcome to the Resource Request and Sharing thread!\n\n## How..."
   },
   {
-    "title": "What packages should intermediate Devs know like the back of their hand?",
-    "author": "MilanTheNoob",
-    "score": 149,
-    "url": "https://www.reddit.com/r/Python/comments/1mk5sk8/what_packages_should_intermediate_devs_know_like/",
-    "created_utc": "2025-08-07T17:07:59",
-    "num_comments": 128,
-    "selftext": "Of course it's highly dependent on why you use python. But I would argue there are essentials that apply for almost all types of Devs including requests, typing, os, etc.\n\nVery curious to know what ot..."
+    "title": "Best Python Automation Framework Design courses",
+    "author": "Some_Owl9375",
+    "score": 13,
+    "url": "https://www.reddit.com/r/Python/comments/1ml6bba/best_python_automation_framework_design_courses/",
+    "created_utc": "2025-08-08T20:35:37",
+    "num_comments": 2,
+    "selftext": "Hi All,\n\nCould you share the best online Python Automation Framework Design courses that also include system design concepts and thoroughly explain all the key components to consider for building an o..."
   },
   {
     "title": "What are the benefits of UV's build backend?",
     "author": "auric_gremlin",
-    "score": 20,
+    "score": 91,
     "url": "https://www.reddit.com/r/Python/comments/1mkkoj8/what_are_the_benefits_of_uvs_build_backend/",
     "created_utc": "2025-08-08T03:33:24",
-    "num_comments": 11,
+    "num_comments": 27,
     "selftext": "Has anyone started using the newly stabilized build backend from UV? I'm seeing little discussion as to the benefits of it and am curious as to whether anyone has had tangible experiences with it."
+  },
+  {
+    "title": "How weird was your first interaction with Python? I learned Python while writing a C++ module.",
+    "author": "Humdaak_9000",
+    "score": 0,
+    "url": "https://www.reddit.com/r/Python/comments/1mldov3/how_weird_was_your_first_interaction_with_python/",
+    "created_utc": "2025-08-09T02:03:10",
+    "num_comments": 7,
+    "selftext": "I was tasked with making some of our C++ code callable from Python.  Before I knew Python.\n\nFortunately, SWIG helped a lot.  Unfortunately, it was somewhat akin to performing open-heart surgery on som..."
+  },
+  {
+    "title": "What packages should intermediate Devs know like the back of their hand?",
+    "author": "MilanTheNoob",
+    "score": 203,
+    "url": "https://www.reddit.com/r/Python/comments/1mk5sk8/what_packages_should_intermediate_devs_know_like/",
+    "created_utc": "2025-08-07T17:07:59",
+    "num_comments": 153,
+    "selftext": "Of course it's highly dependent on why you use python. But I would argue there are essentials that apply for almost all types of Devs including requests, typing, os, etc.\n\nVery curious to know what ot..."
+  },
+  {
+    "title": "Updates on a project I am passionate about- Darnahi",
+    "author": "TestPilot1980",
+    "score": 0,
+    "url": "https://www.reddit.com/r/Python/comments/1mlcjsn/updates_on_a_project_i_am_passionate_about_darnahi/",
+    "created_utc": "2025-08-09T01:07:32",
+    "num_comments": 2,
+    "selftext": "Updates on a project I am passionate about- Darnahi\n\nImagine visiting a doctor 5 years ago. Now ask yourself if you still have the record if you look for it. Darnahi will allow you to store it, index ..."
   },
   {
     "title": "Synchrotron - a pure python live audio engine!",
     "author": "ThatOtherAndrew",
-    "score": 33,
+    "score": 54,
     "url": "https://www.reddit.com/r/Python/comments/1mkaf83/synchrotron_a_pure_python_live_audio_engine/",
     "created_utc": "2025-08-07T20:02:44",
-    "num_comments": 10,
+    "num_comments": 24,
     "selftext": "Hello everyone! I've spent the past year working on **Synchrotron** \\- a live audio engine I've been programming from the ground up in **only Python.** This mainly stems from being tired of everything..."
   },
   {
     "title": "Where do enterprises run analytic python code?",
     "author": "tylerriccio8",
-    "score": 67,
+    "score": 87,
     "url": "https://www.reddit.com/r/Python/comments/1mk1vc7/where_do_enterprises_run_analytic_python_code/",
     "created_utc": "2025-08-07T14:39:52",
-    "num_comments": 86,
+    "num_comments": 92,
     "selftext": "I work at a regional bank. We have zero python infrastructure; as in data scientists and analysts will download and install python on their local machine and run the code there.\n\nThere’s no limiting/t..."
   },
   {
     "title": "Preventing ZIP parser confusion attacks on Python package installers",
     "author": "zurtex",
-    "score": 16,
+    "score": 25,
     "url": "https://www.reddit.com/r/Python/comments/1mk5uio/preventing_zip_parser_confusion_attacks_on_python/",
     "created_utc": "2025-08-07T17:09:58",
     "num_comments": 0,
     "selftext": "uv and PyPI have both released statements on a hypothetical security vulnerability that has been prevented in PyPI and uv 0.8.6+.\n\nPyPI Summary: https://discuss.python.org/t/pypi-is-preventing-zip-par..."
-  },
-  {
-    "title": "Which is better for a new API, FastAPI or Django REST Framework?",
-    "author": "fatherofgoku",
-    "score": 20,
-    "url": "https://www.reddit.com/r/Python/comments/1mk2vx5/which_is_better_for_a_new_api_fastapi_or_django/",
-    "created_utc": "2025-08-07T15:18:38",
-    "num_comments": 22,
-    "selftext": "Hey devs , I’m going for a new backend for a mid-sized project (real-time dashboard + standard CRUD APIs). I’ve used DRF in production before, but I’m curious about FastAPI’s performance and async sup..."
-  },
-  {
-    "title": "pyhnsw = small, fast nearest neighbor embeddings search",
-    "author": "Razzmatazz_Informal",
-    "score": 12,
-    "url": "https://www.reddit.com/r/Python/comments/1mk2rds/pyhnsw_small_fast_nearest_neighbor_embeddings/",
-    "created_utc": "2025-08-07T15:13:44",
-    "num_comments": 2,
-    "selftext": "**What My Project Does**  \nHI, so a while back I created [https://github.com/dicroce/hnsw](https://github.com/dicroce/hnsw) which is a C++ implementation of the \"hierarchical navigable small worlds\" e..."
-  },
-  {
-    "title": "What python based game engine would you recommend?",
-    "author": "Da1stGenshinImpacter",
-    "score": 19,
-    "url": "https://www.reddit.com/r/Python/comments/1mjw40b/what_python_based_game_engine_would_you_recommend/",
-    "created_utc": "2025-08-07T10:08:24",
-    "num_comments": 24,
-    "selftext": "For some background info, I have been using python for school since 2024 but i'm still kinda grasping some aspects of it. For my school project, I have decided to create a video game. For context, the..."
   }
 ]

@@ -1,8 +1,12 @@
-version: '3.8'
-
 services:
-  reddit-demo:
+  fashion-graph:
+    # image creation
     build: .
+    image: fashion-graph-image
+    pull_policy: never
+    container_name: fashion-graph-container
+
+    # runtime
     environment:
       - REDDIT_CLIENT_ID=${REDDIT_CLIENT_ID}
       - REDDIT_CLIENT_SECRET=${REDDIT_CLIENT_SECRET}
@@ -10,4 +14,3 @@ services:
       - POST_LIMIT=${POST_LIMIT:-10}
     volumes:
       - ./output:/app/output
-    working_dir: /app

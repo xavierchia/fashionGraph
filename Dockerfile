@@ -15,9 +15,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the main application file into the container
 COPY reddit_demo.py .
 
-# Set environment variable to ensure Python output is sent directly to terminal
-# This prevents buffering of stdout/stderr in Docker containers
-ENV PYTHONUNBUFFERED=1
+# Define the entrypoint to always run Python with unbuffered output
+ENTRYPOINT ["python", "-u"]
 
-# Define the default command to run when container starts
-CMD ["python", "reddit_demo.py"]
+# Define the default script to run when container starts
+CMD ["reddit_demo.py"]
