@@ -12,11 +12,11 @@ COPY requirements.txt .
 # --no-cache-dir prevents pip from storing downloaded packages locally
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the main application file into the container
-COPY reddit_demo.py .
+# Copy all Python files into the container
+COPY *.py .
 
 # Define the entrypoint to always run Python with unbuffered output
 ENTRYPOINT ["python", "-u"]
 
 # Define the default script to run when container starts
-CMD ["reddit_demo.py"]
+CMD ["reddit_demo_new.py"]

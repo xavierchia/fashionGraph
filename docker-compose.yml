@@ -10,7 +10,10 @@ services:
     environment:
       - REDDIT_CLIENT_ID=${REDDIT_CLIENT_ID}
       - REDDIT_CLIENT_SECRET=${REDDIT_CLIENT_SECRET}
-      - SUBREDDIT_NAME=${SUBREDDIT_NAME:-python}
+      - SEARCH_TERM=${SEARCH_TERM:-python}
+      - SEARCH_SORT=${SEARCH_SORT:-relevance}
+      - TIME_FILTER=${TIME_FILTER:-all}
       - POST_LIMIT=${POST_LIMIT:-10}
+      - PHASE=${PHASE:-1}
     volumes:
-      - ./output:/app/output
+      - .:/app # map the entire app for quick development
