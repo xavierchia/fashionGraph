@@ -1,0 +1,452 @@
+[
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 2,
+    "mentions": 108
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 3,
+    "mentions": 57
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 4,
+    "mentions": 45
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 5,
+    "mentions": 37
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 6,
+    "mentions": 30
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 7,
+    "mentions": 28
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 8,
+    "mentions": 26
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 9,
+    "mentions": 22
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 10,
+    "mentions": 20
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 11,
+    "mentions": 18
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 12,
+    "mentions": 16
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 13,
+    "mentions": 15
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 14,
+    "mentions": 13
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 15,
+    "mentions": 10
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 16,
+    "mentions": 10
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 17,
+    "mentions": 10
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 18,
+    "mentions": 9
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 19,
+    "mentions": 9
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 20,
+    "mentions": 9
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 21,
+    "mentions": 9
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 22,
+    "mentions": 8
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 23,
+    "mentions": 7
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 24,
+    "mentions": 7
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 25,
+    "mentions": 7
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 26,
+    "mentions": 7
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 27,
+    "mentions": 7
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 28,
+    "mentions": 6
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 29,
+    "mentions": 6
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 30,
+    "mentions": 5
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 31,
+    "mentions": 5
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 32,
+    "mentions": 5
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 33,
+    "mentions": 5
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 34,
+    "mentions": 5
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 35,
+    "mentions": 5
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 36,
+    "mentions": 5
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 37,
+    "mentions": 4
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 38,
+    "mentions": 4
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 39,
+    "mentions": 4
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 40,
+    "mentions": 4
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 41,
+    "mentions": 4
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 42,
+    "mentions": 4
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 43,
+    "mentions": 3
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 44,
+    "mentions": 3
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 45,
+    "mentions": 3
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 46,
+    "mentions": 3
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 47,
+    "mentions": 3
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 48,
+    "mentions": 3
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 49,
+    "mentions": 3
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 50,
+    "mentions": 3
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 51,
+    "mentions": 3
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 52,
+    "mentions": 3
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 53,
+    "mentions": 2
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 54,
+    "mentions": 2
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 55,
+    "mentions": 2
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 56,
+    "mentions": 2
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 57,
+    "mentions": 2
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 58,
+    "mentions": 2
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 59,
+    "mentions": 2
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 60,
+    "mentions": 2
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 61,
+    "mentions": 2
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 62,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 63,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 64,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 65,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 66,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 67,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 68,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 69,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 70,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 71,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 72,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 73,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 74,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 75,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 76,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 77,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 78,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 79,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 80,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 81,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 82,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 83,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 84,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 85,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 86,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 87,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 88,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 89,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 90,
+    "mentions": 1
+  },
+  {
+    "brand_a_id": 1,
+    "brand_b_id": 91,
+    "mentions": 1
+  }
+]

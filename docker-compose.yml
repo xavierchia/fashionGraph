@@ -10,6 +10,7 @@ services:
     environment:
       - REDDIT_CLIENT_ID=${REDDIT_CLIENT_ID}
       - REDDIT_CLIENT_SECRET=${REDDIT_CLIENT_SECRET}
+      - CLAUDE_API_KEY=${CLAUDE_API_KEY}
       - SEARCH_TERM=${SEARCH_TERM:-python}
       - SEARCH_SORT=${SEARCH_SORT:-relevance}
       - TIME_FILTER=${TIME_FILTER:-all}
