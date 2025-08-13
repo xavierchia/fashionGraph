@@ -4,12 +4,21 @@ import praw
 import os
 import json
 from datetime import datetime
+import utils
 
 def main():
     print("=== PHASE 2: FETCH FULL POST DETAILS ===")
     
+    # Get search parameters from environment
+    search_term = os.environ.get('SEARCH_TERM', 'python')
+    subreddit_name = os.environ['SUBREDDIT_NAME']
+    post_limit = int(os.environ.get('POST_LIMIT', 5))
+    
+    # Get search-specific directory
+    output_dir = utils.get_search_output_dir(search_term, subreddit_name)
+    input_file = os.path.join(output_dir, 'reddit_posts.json')
+    
     # Check if Phase 1 data exists
-    input_file = '/app/output/reddit_posts.json'
     if not os.path.exists(input_file):
         print(f"❌ Error: {input_file} not found. Run Phase 1 first (PHASE=1)")
         return
@@ -33,8 +42,8 @@ def main():
     
     super_output = []
     
-    for i, post_data in enumerate(posts_data, 1):
-        print(f"Processing post {i}/{len(posts_data)}: {post_data['title'][:50]}...")
+    for i, post_data in enumerate(posts_data[:post_limit], 1):
+        print(f"Processing post {i}/{min(post_limit, len(posts_data))}: {post_data['title'][:50]}...")
         
         post_id = post_data.get('id')
         if not post_id:
@@ -73,8 +82,8 @@ def main():
             print(f"  ✗ Error processing post: {e}")
             continue
     
-    # Save Phase 2 data
-    output_file = '/app/output/superOutput.json'
+    # Save Phase 2 data to search-specific directory
+    output_file = os.path.join(output_dir, 'superOutput.json')
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(super_output, f, indent=2, ensure_ascii=False)
     

@@ -4,6 +4,7 @@ import praw
 import os
 import json
 from datetime import datetime
+import utils
 
 def main():
     print("=== PHASE 1: SEARCH POSTS ===", flush=True)
@@ -25,8 +26,12 @@ def main():
         user_agent='fashionGraph/1.0 by /u/Substantial_Purple_1'
     )
     
-    subreddit = reddit.subreddit('BuyItForLife')
+    subreddit_name = os.environ['SUBREDDIT_NAME']
+    subreddit = reddit.subreddit(subreddit_name)
     posts_data = []
+    
+    # Create search-specific output directory
+    output_dir = utils.ensure_search_output_directory(search_term, subreddit_name)
     
     for post in subreddit.search(search_term, sort=search_sort, time_filter=time_filter, limit=limit):
         post_info = {
@@ -45,10 +50,7 @@ def main():
     
     print("Saving data...", flush=True)
     
-    # Save data
-    output_dir = '/app/output'
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
+    # Save data to search-specific directory
     output_file = os.path.join(output_dir, 'reddit_posts.json')
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(posts_data, f, indent=2, ensure_ascii=False)

@@ -21,16 +21,21 @@ def main():
         subprocess.run([sys.executable, '-u', 'phase3_analysis.py'],
                       stdout=sys.stdout, stderr=sys.stderr)
     elif phase == '4':
-        print("Running Phase 4: Extract brand categories", flush=True)
-        subprocess.run([sys.executable, '-u', 'phase4_category_analysis.py'],
+        print("Running Phase 4: Brand deduplication", flush=True)
+        subprocess.run([sys.executable, '-u', 'phase4_deduplication.py'],
+                      stdout=sys.stdout, stderr=sys.stderr)
+    elif phase == '5':
+        print("Running Phase 5: Extract brand categories", flush=True)
+        subprocess.run([sys.executable, '-u', 'phase5_category_analysis.py'],
                       stdout=sys.stdout, stderr=sys.stderr)
     else:
         print(f"Invalid PHASE value: {phase}")
         print("Valid options:")
         print("  PHASE=1  - Search and save post summaries")
         print("  PHASE=2  - Fetch full post details and comments")
-        print("  PHASE=3  - Analyze with Claude AI for brands/categories")
-        print("  PHASE=4  - Extract brand categories and relationships")
+        print("  PHASE=3  - Analyze with Claude AI for brand mentions")
+        print("  PHASE=4  - Brand deduplication and normalization")
+        print("  PHASE=5  - Extract brand categories and relationships")
 
 if __name__ == "__main__":
     main()
