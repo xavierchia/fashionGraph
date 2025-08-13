@@ -24,10 +24,6 @@ def main():
         print("Running Phase 4: Brand deduplication", flush=True)
         subprocess.run([sys.executable, '-u', 'phase4_deduplication.py'],
                       stdout=sys.stdout, stderr=sys.stderr)
-    elif phase == '5':
-        print("Running Phase 5: Extract brand categories", flush=True)
-        subprocess.run([sys.executable, '-u', 'phase5_category_analysis.py'],
-                      stdout=sys.stdout, stderr=sys.stderr)
     else:
         print(f"Invalid PHASE value: {phase}")
         print("Valid options:")

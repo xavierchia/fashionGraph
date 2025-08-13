@@ -6,7 +6,6 @@ import anthropic
 from typing import Dict, List, Any
 import utils
 
-
 def analyze_post_for_brands(post_data: Dict[str, Any], client: anthropic.Anthropic) -> Dict[str, Any]:
     """Analyze a single post for potential brand mentions"""
     
