@@ -7,8 +7,16 @@ import time
 from typing import Dict, List, Any
 import utils
 
-def analyze_post_for_brands(post_data: Dict[str, Any], client: anthropic.Anthropic) -> Dict[str, Any]:
-    """Analyze a single post for potential brand mentions"""
+def analyze_post_with_token_management(post_data: Dict[str, Any], client: anthropic.Anthropic, token_tracker: Dict[str, int]) -> Dict[str, Any]:
+    """Analyze a single post with proactive token limit management"""
+    
+    # Check if we're approaching rate limit (45K out of 50K)
+    current_tokens = token_tracker.get('minute_tokens', 0)
+    if current_tokens >= 30000:
+        print(f"⏳ Approaching token limit ({current_tokens}/50,000). Sleeping 60 seconds to reset...")
+        time.sleep(60)
+        token_tracker['minute_tokens'] = 0
+        token_tracker['minute_start'] = time.time()
     
     # Extract text content
     title = post_data.get('original_data', {}).get('title', '')
@@ -55,6 +63,22 @@ IMPORTANT: Respond with ONLY valid JSON, no explanatory text before or after. Us
         # Parse JSON response
         raw_response = response.content[0].text
         analysis = json.loads(raw_response)
+        
+        # Track token usage
+        usage = response.usage
+        total_used = usage.input_tokens + usage.output_tokens
+        
+        # Update token tracker
+        token_tracker['minute_tokens'] += total_used
+        
+        print(f"🔍 Tokens used: {total_used} (Minute total: {token_tracker['minute_tokens']}/50,000)")
+        
+        # Add usage info to response
+        analysis['_token_usage'] = {
+            'input_tokens': usage.input_tokens,
+            'output_tokens': usage.output_tokens
+        }
+        
         return analysis
         
     except json.JSONDecodeError as e:
@@ -64,6 +88,13 @@ IMPORTANT: Respond with ONLY valid JSON, no explanatory text before or after. Us
     except Exception as e:
         print(f"Error analyzing post {post_data.get('post_id', 'unknown')}: {e}")
         return {}
+
+
+def analyze_post_for_brands(post_data: Dict[str, Any], client: anthropic.Anthropic, token_tracker: Dict[str, int] = None) -> Dict[str, Any]:
+    """Analyze a single post for potential brand mentions"""
+    if token_tracker is None:
+        token_tracker = {'minute_tokens': 0, 'minute_start': time.time()}
+    return analyze_post_with_token_management(post_data, client, token_tracker)
 
 def main():
     utils.print_phase_header(3, "Fashion Data Analysis with Claude")
@@ -92,20 +123,25 @@ def main():
     
     print(f"Found {len(posts_data)} posts to analyze")
     
-    # Initialize Claude client
+    # Initialize Claude client and token tracker
     client = utils.get_claude_client()
+    token_tracker = {'minute_tokens': 0, 'minute_start': time.time()}
     
     # Process all posts and accumulate brand mentions
     brand_accumulator = {}
+    total_input_tokens = 0
+    total_output_tokens = 0
     
     for i, post in enumerate(posts_data[:post_limit], 1):
         post_title = post.get('original_data', {}).get('title', 'No title')
         print(f"\n📊 Analyzing post {i}/{min(post_limit, len(posts_data))}: {post_title[:50]}...")
         
-        analysis = analyze_post_for_brands(post, client)
+        analysis = analyze_post_for_brands(post, client, token_tracker)
         
-        # Add delay to avoid rate limits (1.5 seconds between requests)
-        time.sleep(1.5)
+        # Track token usage
+        if analysis and '_token_usage' in analysis:
+            total_input_tokens += analysis['_token_usage']['input_tokens']
+            total_output_tokens += analysis['_token_usage']['output_tokens']
         
         if analysis and 'brands' in analysis:
             print(f"✅ Found {len(analysis['brands'])} brands")
@@ -134,9 +170,12 @@ def main():
     utils.save_json_file(brands_json, brands_file, "brands", compact_array=True)
     
     # Phase completion summary
+    print(f"\n📊 Total token usage: Input: {total_input_tokens:,}, Output: {total_output_tokens:,}, Total: {total_input_tokens + total_output_tokens:,}")
+    
     stats = {
         "Posts processed": min(post_limit, len(posts_data)),
         "Unique brands found": len(brands_json),
+        "Total tokens used": f"{total_input_tokens + total_output_tokens:,}",
         "Files saved": brands_file
     }
     utils.print_phase_complete(3, stats)
