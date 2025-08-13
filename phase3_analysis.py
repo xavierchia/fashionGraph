@@ -3,6 +3,7 @@
 import os
 import json
 import anthropic
+import time
 from typing import Dict, List, Any
 import utils
 
@@ -102,6 +103,9 @@ def main():
         print(f"\n📊 Analyzing post {i}/{min(post_limit, len(posts_data))}: {post_title[:50]}...")
         
         analysis = analyze_post_for_brands(post, client)
+        
+        # Add delay to avoid rate limits (1.5 seconds between requests)
+        time.sleep(1.5)
         
         if analysis and 'brands' in analysis:
             print(f"✅ Found {len(analysis['brands'])} brands")

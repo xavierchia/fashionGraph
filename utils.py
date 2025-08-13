@@ -84,7 +84,7 @@ def load_json_file(file_path: str, description: str = "file") -> Dict[str, Any]:
         print(f"❌ Error loading {description}: {e}")
         return None
 
-def save_json_file(data: Any, file_path: str, description: str = "file", indent: int = 2, compact_array: bool = False):
+def save_json_file(data: Any, file_path: str, description: str = "file", indent: int = 2, compact_array: bool = True):
     """Save data to JSON file with error handling"""
     try:
         with open(file_path, 'w', encoding='utf-8') as f:
