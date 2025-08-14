@@ -158,12 +158,19 @@ def main():
         else:
             print("❌ Analysis failed")
     
-    # Create brands.json with IDs (sorted alphabetically by name)
-    brand_list = sorted(brand_accumulator.items(), key=lambda x: x[0].lower())
+    # Filter out brands with only 1 mention, then create brands.json with IDs (sorted alphabetically by name)
+    filtered_brands = {name: count for name, count in brand_accumulator.items() if count > 1}
+    brand_list = sorted(filtered_brands.items(), key=lambda x: x[0].lower())
     brands_json = [
         {"id": i+1, "name": name, "total_mentions": count}
         for i, (name, count) in enumerate(brand_list)
     ]
+    
+    # Report filtering results
+    original_count = len(brand_accumulator)
+    filtered_count = len(filtered_brands)
+    removed_count = original_count - filtered_count
+    print(f"🔍 Filtered out {removed_count} brands with only 1 mention ({original_count} → {filtered_count} brands)")
     
     # Save raw_brands.json to search-specific directory
     brands_file = os.path.join(output_dir, 'raw_brands.json')
@@ -175,6 +182,8 @@ def main():
     stats = {
         "Posts processed": min(post_limit, len(posts_data)),
         "Unique brands found": len(brands_json),
+        "Brands before filtering": original_count,
+        "Brands filtered out": removed_count,
         "Total tokens used": f"{total_input_tokens + total_output_tokens:,}",
         "Files saved": brands_file
     }

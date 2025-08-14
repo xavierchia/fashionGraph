@@ -48,6 +48,12 @@ def main():
 
     print(f"Found {len(posts_data)} posts", flush=True)
     
+    # Sort posts by score (highest to lowest) and keep top 100
+    posts_data.sort(key=lambda x: x['score'], reverse=True)
+    posts_data = posts_data[:100]
+    
+    print(f"After sorting and filtering: keeping top {len(posts_data)} posts by score", flush=True)
+    
     print("Saving data...", flush=True)
     
     # Save data to search-specific directory
