@@ -383,6 +383,5 @@
   {"brand_id_1": 1, "brand_id_2": 383, "total_mentions": 2},
   {"brand_id_1": 1, "brand_id_2": 384, "total_mentions": 2},
   {"brand_id_1": 1, "brand_id_2": 385, "total_mentions": 3},
-  {"brand_id_1": 1, "brand_id_2": 386, "total_mentions": 2},
-  {"brand_id_1": 2, "brand_id_2": 3, "total_mentions": 0}
+  {"brand_id_1": 1, "brand_id_2": 386, "total_mentions": 2}
 ]
